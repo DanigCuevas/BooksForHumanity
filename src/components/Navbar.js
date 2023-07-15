@@ -185,8 +185,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-=======
->>>>>>> 1595e52d7803d8eb86dd0a9948b781ab23052b38
     </>
   );
 }
