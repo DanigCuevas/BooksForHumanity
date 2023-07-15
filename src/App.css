@@ -45,6 +45,9 @@
   color: black;
 }
 
+.navbarLogo {
+  border-radius: 1rem;
+}
 /*
 *
 * ==========================================
@@ -58,3 +61,7 @@
   background: linear-gradient(to right, #e8cbc0, #636fa4); */
   /* min-height: 100vh; */
 /* } */
+
+.form-control {
+  width:100px;
+}
