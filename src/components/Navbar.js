@@ -170,11 +170,15 @@ export default function Navbar() {
 
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-                <Link to="/about" className="nav-link">Discover</Link>
+                <Link to="/" className="nav-link">Discover</Link>
+              </li>
+            <li className="nav-item">
+                <Link to="/about" className="nav-link">About Us</Link>
               </li>
               <li className="nav-item">
                 <Link to="/profile" className="nav-link">Profile</Link>
               </li>
+             
           </ul>
         </div>
       </div>
