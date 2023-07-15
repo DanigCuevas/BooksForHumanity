@@ -1,9 +1,13 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 export default function Home() {
     // return <h1>Home</h1>
     return(
+        // Slide show compoenets 
+        <>
         <Carousel fade>
             <Carousel.Item>
             <img
@@ -13,7 +17,7 @@ export default function Home() {
             />
             <Carousel.Caption>
                 <h3>Find gently used book near you!</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p>Look through the discover tab to find books you're in search for that people are giving away. </p>
             </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -25,7 +29,7 @@ export default function Home() {
 
             <Carousel.Caption>
                 <h3>Share the books you love with someone new</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Post a book you don't need anymore and let someone new get a chance to read them. </p>
             </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -38,10 +42,26 @@ export default function Home() {
             <Carousel.Caption>
                 <h3>Making a difference one book at a time</h3>
                 <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Sustianably donating books so everyone gets a chance to read. 
                 </p>
             </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-     );
+
+    {/* Book postings */}
+    <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src="https://img.freepik.com/free-vector/abstract-elegant-winter-book-cover_23-2148798745.jpg?w=1380&t=st=1689461100~exp=1689461700~hmac=16605e9e6b6b4a72d8c22a69cbb2c9a7e78d18faf1984c4e4390f6b9d9c1fd75" />
+        <Card.Body>
+            <Card.Title>Different Winter</Card.Title>
+            <Card.Text>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Add to Cart</Button>
+        </Card.Body>
+    </Card>
+    </>
+    );
+
+   
 }
