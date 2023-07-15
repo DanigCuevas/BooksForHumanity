@@ -13,7 +13,7 @@ export default function Navbar() {
               draggable="false"
               height="70"
             />
-          </a>
+          </a> 
 
           <button
             className="navbar-toggler"
@@ -64,6 +64,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
 
       <div className="container py-5">
         <div className="row text-center text-black">
@@ -184,6 +185,8 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+=======
+>>>>>>> 1595e52d7803d8eb86dd0a9948b781ab23052b38
     </>
   );
 }

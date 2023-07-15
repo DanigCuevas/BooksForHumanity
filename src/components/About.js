@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+import React from 'react';
+>>>>>>> 1595e52d7803d8eb86dd0a9948b781ab23052b38
 
 export default function About() {
   return (
     <>
+<<<<<<< HEAD
     <div>
         <div className="container py-5">
+=======
+      <div className="container py-5">
+>>>>>>> 1595e52d7803d8eb86dd0a9948b781ab23052b38
         <div className="row text-center text-black">
           <div className="col-lg-8 mx-auto">
             <h1 className="display-4">Our Team</h1>
@@ -73,6 +81,7 @@ export default function About() {
               <h5 className="mb-0">Team Member 4</h5>
               <span className="small text-uppercase text-muted">CEO - Founder</span>
             </div>
+<<<<<<< HEAD
          
     </div>
     </div>
@@ -83,3 +92,15 @@ export default function About() {
   )
 }
 
+=======
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+
+
+
+>>>>>>> 1595e52d7803d8eb86dd0a9948b781ab23052b38
