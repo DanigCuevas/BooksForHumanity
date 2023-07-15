@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -141,11 +142,11 @@ export default function Navbar() {
 
 <nav className="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand">
           <img src="assets/images/logo.jpg" alt="logo" class="navbarLogo" height="70">
  
           </img>
-        </a>
+        </Link>
         <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -169,13 +170,10 @@ export default function Navbar() {
 
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-                <a className="nav-link" href="">Discover</a>
+                <Link to="/about" className="nav-link">Discover</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="">About Us</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="">Sign In</a>
+                <Link to="/profile" className="nav-link">Profile</Link>
               </li>
           </ul>
         </div>
@@ -186,5 +184,15 @@ export default function Navbar() {
 }
 
 
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  )
+}
