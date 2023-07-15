@@ -140,7 +140,7 @@ export default function Navbar() {
       </div> */}
 
 <nav className="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
-      <div className="container-fluid">
+      <div className="container">
         <a className="navbar-brand" href="#">
           <img src="assets/images/logo.jpg" alt="logo" class="navbarLogo" height="70">
  
@@ -167,20 +167,16 @@ export default function Navbar() {
             </div>
           </form>
 
-          {/* <form role="search">
-            <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
-          </form> */}
-
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-              <a className="nav-link" href="">Discover</a>
-            </li>
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link" href="">About Us</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="">Sign In</a>
-            </li>
+                <a className="nav-link" href="">Discover</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="">About Us</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="">Sign In</a>
+              </li>
           </ul>
         </div>
       </div>
