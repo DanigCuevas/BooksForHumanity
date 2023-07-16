@@ -64,8 +64,8 @@ function SignUp() {
               )}
 
               <p className="small-xl pt-3 text-center">
-                <span className="text-muted">Not a member? </span>
-                <Link to="/signup">Sign Up</Link>
+                <span className="text-muted">Already a member? </span>
+                <Link to="/profile">Sign In</Link>
               </p>
             </form>
           </div>
