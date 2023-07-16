@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 function SignUp() {
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const onSubmit = (data) => {
     console.log(data);
+    setIsFormSubmitted(true);
   };
 
   return (
@@ -15,8 +17,7 @@ function SignUp() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <form onSubmit={handleSubmit(onSubmit)} action="/DemoProject">
-
+            <form onSubmit={handleSubmit(onSubmit)} action="/demoProfile" method="post">
               <div className="mb-3">
                 <label htmlFor="firstName" className="form-label">First Name</label>
                 <input type="text" className={`form-control ${errors.firstName ? 'is-invalid' : ''}`} {...register("firstName", { required: true })} />
@@ -52,11 +53,19 @@ function SignUp() {
                 <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
               </div>
 
-              <button type="submit" className="btn btn-primary">Sign Up</button>
+              {isFormSubmitted ? (
+                <Link to="/demoProfile" className="btn btn-primary">
+                  Sign Up
+                </Link>
+              ) : (
+                <button type="submit" className="btn btn-primary">
+                  Sign Up
+                </button>
+              )}
 
               <p className="small-xl pt-3 text-center">
-                <span className="text-muted">Already a member? </span>
-                <Link to="/profile">Sign In</Link>
+                <span className="text-muted">Not a member? </span>
+                <Link to="/signup">Sign Up</Link>
               </p>
             </form>
           </div>
@@ -67,4 +76,3 @@ function SignUp() {
 }
 
 export default SignUp;
-

@@ -85,18 +85,19 @@ export default function Home() {
         {/* POP UP INFO OF BOOK for Book 1*/}
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title className="ms-auto">A Love Story</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <img src="https://img.freepik.com/free-vector/elegant-love-book-cover-template_23-2148798559.jpg?w=1060&t=st=1689462213~exp=1689462813~hmac=be85978f96ede2ffaaec309ad3cda46751791b8a77a38c03846343c72a3bc487" class="img-fluid"/>
-                Woohoo, you are reading this text in a modal!</Modal.Body>
-              <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-                Save Changes
-            </Button>
+                A wonderful story about love and growing up. 
+                Username: dcueva
+                Location: Seattle, WA
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="primary"> Add to Cart </Button>{' '}
+              <Button variant="outline-secondary">
+                 <FontAwesomeIcon icon={faHeart} /> 
+              </Button>
             </Modal.Footer>
       </Modal>
 
