@@ -48,6 +48,20 @@
 .navbarLogo {
   border-radius: 1rem;
 }
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn:focus{
+  background-color: #C4A484 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.card{
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
+
+
 /*
 *
 * ==========================================

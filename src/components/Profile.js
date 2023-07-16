@@ -1,44 +1,53 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-export default function Profile() {
-    return (
-        <div class="pt-5">  
-            <h1 class="text-center"> Sign In Form </h1>  
-            <div class="container">  
-                <div class="row">  
-                    <div class="col-md-5 mx-auto">  
-                        <div class="card card-body">  
-                            <form id="submitForm" action="#" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1">  
-                                <input type="hidden" name="_csrf" value="7635eb83-1f95-4b32-8788-abec2724a9a4"/>  
-                                <div class="form-group required">  
-                                    <lSabel for="username"> Enter your email </lSabel>  
-                                    <input type="text" class="form-control text-lowercase" id="username" required="" name="username" value=""/>  
-                                </div>                      
-                                <div class="form-group required">  
-                                    <label class="d-flex flex-row align-items-center" for="password"> Enter your password</label>  
-                                    <input type="password" class="form-control" required="" id="password" name="password" value=""/>  
-                                </div>  
-                                <div class="form-group mt-4 mb-4">  
-                                    <div class="custom-control custom-checkbox">  
-                                        <input type="checkbox" class="custom-control-input" id="remember-me" name="remember-me" data-parsley-multiple="remember-me"/>  
-                                        <label clss="custom-control-label" for="remember-me"> Remember me? </label>  
-                                    </div>  
-                                </div>  
-                                <div class="form-group pt-1">  
-                                    <button class="btn btn-primary btn-block" type="submit"> Log In </button>  
-                                </div>  
-                            </form>  
-                            <p class="small-xl pt-3 text-center">  
-                                <span class="text-muted"> Not a member? </span>  
-                                {/* <a href="#"> Sign up </a>   */}
-                                <Link to="/signUp">Sign Up</Link>
-                            </p>  
-                        </div>  
-                    </div>  
-                </div>  
-            </div>  
-        </div> 
-    );
-    // return <h1>Profile</h1>
+function Profile() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  return (
+    <>
+    <h1 className="text-center"> Sign In Form </h1>  
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <form onSubmit={handleSubmit(onSubmit)} action="/DemoProject">
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">Email</label>
+              <input type="email" className={`form-control ${errors.email ? 'is-invalid' : ''}`} {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+              {errors.email && <div className="invalid-feedback">Email is required and must be valid</div>}
+            </div>
+
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">Password</label>
+              <input type="password" className={`form-control ${errors.password ? 'is-invalid' : ''}`} {...register("password", { required: true })} />
+              {errors.password && <div className="invalid-feedback">Password is required</div>}
+            </div>
+
+            <div className="mb-3 form-check">
+              <input type="checkbox" className="form-check-input" id="rememberMe" {...register("rememberMe")} />
+              <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
+            </div>
+
+            <button type="submit" className="btn btn-primary">Sign In</button>
+            
+            <p className="small-xl pt-3 text-center">  
+                                <span className="text-muted">Not Member? </span>  
+                                {/* <a href="#"> Sign ip </a>   */}
+                                <Link to="/signup">Sign Up</Link>
+             </p> 
+          </form>
+        </div>
+      </div>
+    </div>
+    </>
+  );
 }
+
+export default Profile;
+
+
