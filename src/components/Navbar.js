@@ -10,14 +10,19 @@ export default function Navbar() {
     event.preventDefault();
     if (searchTerm) {
       try {
-        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}+intitle:${encodeURIComponent(searchTerm)}`);
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}`);
         const data = await response.json();
         setSearchResults(data.items || []);
+        setSearchTerm('');
+        navigate('/search');
       } catch (error) {
         console.log('Error occurred while fetching data:', error);
       }
-      setSearchTerm('');
     }
+  };
+
+  const handleClear = () => {
+    setSearchResults([]);
   };
 
   return (
@@ -27,7 +32,15 @@ export default function Navbar() {
           <Link to="/" className="navbar-brand">
             <img src="assets/images/logo.jpg" alt="logo" className="navbarLogo" height="70" />
           </Link>
-          <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            className="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsExample09"
+            aria-controls="navbarsExample09"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
 
@@ -58,20 +71,27 @@ export default function Navbar() {
                 <Link to="/about" className="nav-link">About Us</Link>
               </li>
               <li className="nav-item">
-                <Link to="/profile" className="nav-link">Login/Sign Up</Link>
+                <Link to="/profile" className="nav-link">Account</Link>
               </li>
               <li className="nav-item">
-                <Link to="/cart" className="nav-link">Cart</Link>
+                <Link to="/cart" className="nav-link">
+                  <img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" width="20" alt="Cart" />
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-
       {searchResults.length > 0 && (
         <div className="container">
-          <h2>Search Results</h2>
+          <div className="row">
+            <div className="col-12 mb-3">
+              <button className="btn btn-primary" onClick={handleClear}>
+                Clear
+              </button>
+            </div>
+          </div>
           <div className="row">
             {searchResults.map((book) => (
               <div className="col-md-4" key={book.id}>
@@ -90,5 +110,9 @@ export default function Navbar() {
     </>
   );
 }
+
+
+
+
 
 

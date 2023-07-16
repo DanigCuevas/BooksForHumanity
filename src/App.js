@@ -7,7 +7,9 @@ import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
 import DemoProfile from './components/DemoProfile';
 import Cart from './components/Cart';
+
 import { Route, Routes } from 'react-router-dom';
+
 
 
 
@@ -24,6 +26,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/demoProfile" element={<DemoProfile/>}/>
           <Route path="/cart" element={<Cart/>}/>
+
         </Routes>
       </div>
     </>

@@ -55,12 +55,32 @@
   box-shadow: none !important;
 }
 
+/*.submit-btn, .submit-btn:hover, .submit-btn:active, .submit-btn:visited, .btn2:focus{
+  background-color: #A9A9A9	!important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+}
 
+.submit-btn:hover{
+  background-color: #0096FF;
+  color: white;
+}*/
+
+/* Creates style for the cards */
 .card{
   margin-top: 5%;
   margin-bottom: 10px;
 }
 
+.nav-link:hover {
+  background-color: lightgray;
+}
 
+.btn-danger {
+  background-color: #C4A484;
 
-
+}
+  
