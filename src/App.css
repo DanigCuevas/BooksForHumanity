@@ -55,8 +55,8 @@
   box-shadow: none !important;
 }
 
-/*.submit-btn, .submit-btn:hover, .submit-btn:active, .submit-btn:visited, .btn2:focus{
-  background-color: #A9A9A9	!important;
+.btn-submit, .btn-submit:hover, .btn-submit:active, .btn-submit:visited{
+  background-color: #C4A484	!important;
   outline: none !important;
   box-shadow: none !important;
   color: white;
@@ -64,10 +64,6 @@
   border-radius: 10px;
 }
 
-.submit-btn:hover{
-  background-color: #0096FF;
-  color: white;
-}*/
 
 /* Creates style for the cards */
 .card{

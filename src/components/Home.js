@@ -31,7 +31,7 @@ export default function Home() {
             <Carousel.Item>
             <img
                 className="d-block w-100"
-                src="https://img.freepik.com/free-photo/books-arrangement-with-cup-cofee_23-2148851107.jpg?w=1380&t=st=1689458901~exp=1689459501~hmac=c8e0b69e1f0dcca591a406af87bfc953c8208fa44f0259b7b32c14dd9208c0ac"
+                src="https://cdn.discordapp.com/attachments/1128041738951479356/1130183295427162182/creative-composition-with-different-books.png"
                 alt="First slide"
             />
             <Carousel.Caption>
@@ -42,7 +42,7 @@ export default function Home() {
             <Carousel.Item>
             <img
                 className="d-block w-100"
-                src="https://img.freepik.com/free-photo/creative-composition-with-books-flower_23-2148851059.jpg?w=1060&t=st=1689458659~exp=1689459259~hmac=699cdc48dd4a130a3538562c08e5b32531f7854ed9b208cb65b83543a56dcdc9"
+                src="https://cdn.discordapp.com/attachments/1128041738951479356/1130183333922476124/arrangement-with-books-white-flowers.jpg"
                 alt="Second slide"
             />
             <Carousel.Caption>
@@ -120,7 +120,7 @@ export default function Home() {
         </Modal>
 
           {/* Book2 */}
-          <Card>
+          <Card onClick={handleShow} style={{ cursor: "pointer" }} >
             <Card.Img variant="top" src="https://img.freepik.com/free-vector/abstract-elegant-winter-book-cover_23-2148798745.jpg?w=1380&t=st=1689461100~exp=1689461700~hmac=16605e9e6b6b4a72d8c22a69cbb2c9a7e78d18faf1984c4e4390f6b9d9c1fd75" />
             <Card.Body>
               <Card.Title>Different Winter</Card.Title>
@@ -166,7 +166,7 @@ export default function Home() {
               </Modal.Footer>
           </Modal>
           {/* Book3 */}
-          <Card>
+          <Card onClick={handleShow} style={{ cursor: "pointer" }} >
             <Card.Img variant="top" src="https://img.freepik.com/free-vector/creative-innovative-education-book-cover_23-2149410117.jpg?w=1060&t=st=1689467203~exp=1689467803~hmac=d77be249a96c26ce1d51c636658a821febfe9f0ee0a251704aaa600580640393" />
             <Card.Body>
               <Card.Title>New Educators</Card.Title>
@@ -212,7 +212,7 @@ export default function Home() {
               </Modal.Footer>
           </Modal>
             {/* Book 4 */}
-          <Card>
+          <Card onClick={handleShow} style={{ cursor: "pointer" }}>
             <Card.Img variant="top" src="https://img.freepik.com/free-vector/good-paper-wattpad-book-cover_23-2149452379.jpg?w=1060&t=st=1689475888~exp=1689476488~hmac=bd9f7cf72f42a63308c0405db4a0f1b260584ac204d7b1a26a3cb416e809e2fc" />
             <Card.Body>
               <Card.Title>Looks Good on Paper</Card.Title>
@@ -258,14 +258,21 @@ export default function Home() {
               </Modal.Footer>
           </Modal>
            {/* Book5 */}
-           <Card>
+           <Card onClick={handleShow} style={{ cursor: "pointer" }}>
             <Card.Img variant="top" src="https://img.freepik.com/free-vector/atomic-love-wattpad-book-cover_23-2149231553.jpg?w=1060&t=st=1689475963~exp=1689476563~hmac=a37063430503f0dfef2b7834224ad39832db7d9927e2bfcdcd530bb55e89b0f6" />
             <Card.Body>
               <Card.Title>Atomic Love</Card.Title>
               <Card.Text>
                 Every page made me want to read even more. It's such a sweet romance book. I'd love for it to go to a new home.
               </Card.Text>
-              <Button variant="primary">Add to Cart</Button>{' '}
+              <Button ref={target} onClick={() => setShow(!show)} variant="primary">Add to Cart</Button>{' '}
+              <Overlay target={target.current} show={show} placement="right">
+                    {(props) => (
+                      <Tooltip id="overlay-example" {...props}>
+                        Added to Cart
+                      </Tooltip>
+                    )}
+              </Overlay>
               <Button variant="outline-secondary">
                 <FontAwesomeIcon icon={faHeart} /> 
               </Button>
