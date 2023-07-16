@@ -10,14 +10,7 @@ import Cart from './components/Cart';
 import { Route, Routes } from 'react-router-dom';
 
 
-// function App() {
-//   return (
-// <>
-// <Navbar/>
-// <About/>
-// </>
-// );
-// }
+
 
 function App() {
   return (

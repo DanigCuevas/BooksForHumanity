@@ -13,6 +13,8 @@ function SignUp() {
 
   return (
     <>
+    
+    <div id="signUp">
       <h1 className="text-center">Sign Up Form</h1>
       <div className="container">
         <div className="row justify-content-center">
@@ -71,8 +73,11 @@ function SignUp() {
           </div>
         </div>
       </div>
+      </div>
     </>
   );
 }
 
 export default SignUp;
+
+
