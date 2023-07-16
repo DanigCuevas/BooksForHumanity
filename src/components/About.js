@@ -26,13 +26,13 @@ and fosters a sense of community amongy book lovers!
             <div className="col-md-6 col-lg-3 mb-5">
               <div className="bg-white rounded shadow-sm py-5 px-4">
                 <img
-                  src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg"
+                  src="https://cdn.discordapp.com/attachments/1128041738951479356/1130062056943538206/field_1_square.png"
                   alt="Image of Alexia"
                   width="100"
                   className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
                 <h5 className="mb-0">Alexia</h5> 
-                <span className="small text-uppercase text-muted">Lorem ipsum dolor sit amet.</span>
+                <span className="small text-uppercase text-muted">University Student in Computer Science</span>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ and fosters a sense of community amongy book lovers!
                   className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
                 <h5 className="mb-0">Daniela</h5>
-                <span className="small text-uppercase text-muted">College Student in Comp Sci.</span>
+                <span className="small text-uppercase text-muted">College Student in Computer Science</span>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ and fosters a sense of community amongy book lovers!
                   className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
                 <h5 className="mb-0">Maan</h5>
-                <span className="small text-uppercase text-muted">College Student in Software Eng.</span>
+                <span className="small text-uppercase text-muted">College Student in Software Engineering</span>
               </div>
             </div>
 
