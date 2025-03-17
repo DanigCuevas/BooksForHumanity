@@ -23,7 +23,7 @@ Follow the steps below to run the project locally:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/books-for-humanity.git
+git clone https://github.com/DanigCuevas/BooksForHumanity.git
 cd books-for-humanity
 
 # 2. Install dependencies
